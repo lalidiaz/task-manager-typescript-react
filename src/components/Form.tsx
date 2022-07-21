@@ -19,17 +19,19 @@ const Form = ({ todo, setTodo, handleAdd }: Props) => {
       }}
     >
       <h3 className="heading">Add a task</h3>
-      <input
-        ref={inputRef}
-        type="input"
-        placeholder="Enter a task"
-        className="form-input"
-        value={todo}
-        onChange={(e) => setTodo(e.target.value)}
-      />
-      <button className="form-btn" type="submit">
-        <AddIcon />
-      </button>
+      <div className="form-content">
+        <input
+          ref={inputRef}
+          type="input"
+          placeholder="Enter a task"
+          className="form-input"
+          value={todo}
+          onChange={(e) => setTodo(e.target.value)}
+        />
+        <button className="form-btn" type="submit">
+          <AddIcon />
+        </button>
+      </div>
     </form>
   );
 };

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { ToDo } from "./model";
 import TodoList from "./components/TodoList";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
-import SideNav from "./components/SideNav";
+import TaskIcon from "@mui/icons-material/Task";
 
 const App: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
@@ -51,9 +51,11 @@ const App: React.FC = () => {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div className="wrapper">
-        <SideNav />
+        <h2 className="app-name">
+          Task Manager 
+        </h2>
+        <Form todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
         <div className="content">
-          <Form todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
           <TodoList
             todos={todos}
             setTodos={setTodos}

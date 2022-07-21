@@ -66,7 +66,6 @@ const SingleTodo = ({ index, todo, todos, setTodos }: Props) => {
               onClick={() => {
                 if (!edit && !todo.isDone) {
                   setEdit(!edit);
-                  console.log("if !edit && isDone");
                 }
               }}
             >

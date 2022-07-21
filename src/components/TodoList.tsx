@@ -14,11 +14,7 @@ const TodoList = ({ todos, setTodos, completedTodos, setCompletedTodos }: Props)
     <>
       <Droppable droppableId="TodosList">
         {(provided, snapshot) => (
-          <div
-            className={`todo-list ${snapshot.isDraggingOver && "drag-active"}`}
-            ref={provided.innerRef}
-            {...provided.droppableProps}
-          >
+          <div className="todo-list" ref={provided.innerRef} {...provided.droppableProps}>
             <span className="heading">Active Tasks</span>
             <ul className="todos-list-container">
               {todos.map((todo, index) => (
@@ -38,7 +34,7 @@ const TodoList = ({ todos, setTodos, completedTodos, setCompletedTodos }: Props)
       <Droppable droppableId="TodosRemove">
         {(provided, snapshot) => (
           <div
-            className={`todo-list  ${snapshot.isDraggingOver ? "drag-complete" : "remove"}`}
+            className="todo-list"
             ref={provided.innerRef}
             {...provided.droppableProps}
           >

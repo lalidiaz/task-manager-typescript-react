@@ -1,8 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap");
 
 :root {
   --opensans: "Open Sans", sans-serif;
-  --poppins: "Poppins", sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -10,138 +9,149 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: var(--poppins);
-  background-color: #fefefe;
-  min-height: 100vh;
-  min-width: 100vw;
+  font-family: var(--opensans);
+  background-color: white;
+  font-size: 1em;
 }
 
 li {
   list-style: none;
 }
-
+.app-name {
+  color: rgb(131, 106, 131);
+}
 .wrapper {
-  width: 100%;
-  height: 100%;
-  padding-top: 100px;
+  min-height: 100%;
+  min-width: 100%;
   display: flex;
-}
-
-.form {
-  width: 25%;
-  border: 1px solid #efebeb;
-  border-radius: 15px;
-  background-color: #f4f8f8;
+  flex-direction: column;
   padding: 20px;
-}
-
-.form-input {
-  padding: 20px 30px;
-  transition: 0.2s;
-  width: 100%;
-  border: none;
-  margin-bottom: 20px;
-}
-
-.form-btn {
-  height: 40px;
-  width: 100%;
-  border: none;
-  border-radius: 8px;
-  color: #6cb8a9;
-  background-color: #e9f1f0;
-}
-.content {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.heading {
-  font-size: 16px;
-  text-align: left;
-}
-.todos-list-container {
-  padding: 0px;
-  font-size: 16px;
-}
-.todo-list {
-  padding: 20px 30px;
-  border-radius: 20px;
-  border: 1px solid #efebeb;
-  border-radius: 15px;
-  background-color: #f4f8f8;
-  width: 25%;
-  list-style: none;
-  margin: 0px;
-  flex: 1;
-}
-
-.single-done-text {
-  height: 100%;
-  width: 100%;
-  border: none;
-  padding: 10px;
-  margin-right: 5px;
-}
-.single-todo {
-  display: flex;
-  border-radius: 5px;
-  padding: 20px;
-  margin-top: 15px;
-  margin-left: 0px;
-  color: #6cb8a9;
-  background-color: #e9f1f0;
-  display: flex;
   align-items: center;
 }
 
-.single-todo-text {
-  font-size: 16px;
-  flex: 1;
-  padding: 5px;
-  border: none;
-  font-size: 20px;
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-.single-todo-icon {
+.form {
+  border-radius: 10px;
+  background-color: #ebecf0;
+  padding: 20px;
+  width: 100%;
+}
+
+.heading {
+  color: gray;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ebecf0;
+  min-height: 48px;
+}
+
+.form-btn {
+  background-color: white;
+  border: transparent;
+  color: rgb(118, 118, 189);
+  margin-top: 10px;
+  border-radius: 5px;
+  height: 48px;
   cursor: pointer;
+  border-radius: 10px;
 }
 
-.drag-active {
-  border: 1px solid #efebeb;
-  border-radius: 15px;
-  background-color: #f4f8f8;
+.todo-list {
+  width: 100%;
+  margin: 20px 0px;
+  background-color: #ebecf0;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.drag-complete {
-  border: 1px solid #efebeb;
-  border-radius: 15px;
-  background-color: #f4f8f8;
+.todos-list-container {
+  flex: 1;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.remove {
-  border: 1px solid #efebeb;
-  border-radius: 15px;
-  background-color: #f4f8f8;
+.single-todo {
+  width: 100%;
+  min-height: 100px;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  margin: 10px 0px;
+  color: gray;
+  background-color: white;
 }
 
 .drag {
-  border: 1px solid #497b71;
+  border: 3px solid rgb(161, 220, 161);
 }
 
-.side-nav-wrapper {
-  width: 20%;
-  background-color: #ffffff;
-  border-right: 1px solid #e6edec;
-  height: 100%;
-  color: #497b71;
-  display: flex;
-  text-align: center;
-  justify-content: center;
+.single-todo-text {
+  width: 100%;
 }
 
 .icons-container {
   display: flex;
+}
+
+.single-done-text {
+  width: 100%;
+  border:1px solid rgb(116, 242, 116);
+}
+.single-icon {
+  padding-left: 10px;
+}
+
+.single-icon:nth-child(1) {
+  color: rgb(237, 185, 88);
+}
+
+.single-icon:nth-child(2) {
+  color: rgb(228, 123, 123);
+}
+
+.single-icon:nth-child(3) {
+  color: rgb(142, 228, 142);
+}
+
+@media only screen and (min-width: 768px) {
+  .content {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .todo-list {
+    width: 500px;
+    margin: 30px 10px;
+  }
+
+  .form {
+    border-radius: 10px;
+    background-color: #ebecf0;
+    padding: 20px;
+    width: 520px;
+  }
+
+  .wrapper {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+  }
 }
